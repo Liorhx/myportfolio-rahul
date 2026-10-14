@@ -1,11 +1,10 @@
 import {
   FaGithub,
-  FaInstagram,
   FaLinkedinIn,
-  FaXTwitter,
 } from "react-icons/fa6";
-import "./styles/SocialIcons.css";
+import { SiLeetcode } from "react-icons/si";
 import { TbNotes } from "react-icons/tb";
+import "./styles/SocialIcons.css";
 import { useEffect } from "react";
 import HoverLinks from "./HoverLinks";
 import { config } from "../config";
@@ -61,27 +60,29 @@ const SocialIcons = () => {
     <div className="icons-section">
       <div className="social-icons" data-cursor="icons" id="social">
         <span>
-          <a href={config.contact.github} target="_blank" rel="noopener noreferrer">
+          <a href={config.contact.github} target="_blank" rel="noopener noreferrer" title="GitHub">
             <FaGithub />
           </a>
         </span>
         <span>
-          <a href={config.contact.linkedin} target="_blank" rel="noopener noreferrer">
+          <a href={config.contact.leetcode} target="_blank" rel="noopener noreferrer" title="LeetCode">
+            <SiLeetcode />
+          </a>
+        </span>
+        <span>
+          <a href={config.contact.linkedin} target="_blank" rel="noopener noreferrer" title="LinkedIn">
             <FaLinkedinIn />
           </a>
         </span>
-        <span>
-          <a href={config.contact.twitter} target="_blank" rel="noopener noreferrer">
-            <FaXTwitter />
-          </a>
-        </span>
-        <span>
-          <a href={config.contact.instagram} target="_blank" rel="noopener noreferrer">
-            <FaInstagram />
-          </a>
-        </span>
       </div>
-      <a className="resume-button" href="#">
+      <a
+        className="resume-button"
+        href="/Rahul_Yadav_Resume.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        data-cursor="disable"
+        title="View Resume"
+      >
         <HoverLinks text="RESUME" />
         <span>
           <TbNotes />
