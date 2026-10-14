@@ -344,7 +344,16 @@ const Play = () => {
     <div className="play-page">
       {/* Header */}
       <div className="play-header">
-        <Link to="/" className="back-button" data-cursor="disable">
+        <Link
+          to="/"
+          className="back-button"
+          data-cursor="disable"
+          onClick={() => {
+            window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+            document.body.style.overflowY = "auto";
+            document.documentElement.style.overflowY = "auto";
+          }}
+        >
           ← Back to Home
         </Link>
       </div>

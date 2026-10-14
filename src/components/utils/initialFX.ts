@@ -4,14 +4,18 @@ import { lenis } from "../Navbar";
 
 export function initialFX() {
   document.body.style.overflowY = "auto";
+  document.documentElement.style.overflowY = "auto";
   if (lenis) {
     lenis.start();
   }
-  document.getElementsByTagName("main")[0].classList.add("main-active");
+  const mainElem = document.getElementsByTagName("main")[0];
+  if (mainElem) {
+    mainElem.classList.add("main-active");
+  }
   gsap.to("body", {
     backgroundColor: "#0b080c",
     duration: 0.5,
-    delay: 1,
+    delay: 0.2,
   });
 
   const selectors = [".landing-info h3", ".landing-intro h2", ".landing-intro h1"];

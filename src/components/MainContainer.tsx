@@ -12,18 +12,21 @@ import TechStackNew from "./TechStackNew";
 import Certifications from "./Certifications";
 import CallToAction from "./CallToAction";
 import setSplitText from "./utils/splitText";
+import { useLoading } from "../context/LoadingProvider";
 
 const MainContainer = ({ children }: PropsWithChildren) => {
+  const { isLoading } = useLoading();
   const [isDesktopView, setIsDesktopView] = useState<boolean>(
     window.innerWidth > 1024
   );
-  const [isMobile] = useState<boolean>(window.innerWidth <= 768);
+  const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth <= 768);
   const [shouldRenderCharacter, setShouldRenderCharacter] = useState(false);
 
   useEffect(() => {
     const resizeHandler = () => {
       setSplitText();
       setIsDesktopView(window.innerWidth > 1024);
+      setIsMobile(window.innerWidth <= 768);
     };
     resizeHandler();
     window.addEventListener("resize", resizeHandler);
@@ -60,23 +63,34 @@ const MainContainer = ({ children }: PropsWithChildren) => {
     };
   }, []);
 
+  useEffect(() => {
+    // When returning to home or loading finishes, guarantee responsiveness and scrolling
+    if (!isLoading) {
+      document.body.style.overflowY = "auto";
+      document.documentElement.style.overflowY = "auto";
+      import("./utils/initialFX").then((module) => {
+        if (module.initialFX) {
+          module.initialFX();
+        }
+      });
+    }
+  }, [isLoading]);
+
   return (
     <div className="container-main">
       <Cursor />
       <Navbar />
       <SocialIcons />
       {isDesktopView && !isMobile && shouldRenderCharacter && children}
-      <div className="container-main">
-        <Landing />
-        <About />
-        <WhatIDo />
-        <Career />
-        <Work />
-        <TechStackNew />
-        <Certifications />
-        <CallToAction />
-        <Contact />
-      </div>
+      <Landing />
+      <About />
+      <WhatIDo />
+      <Career />
+      <Work />
+      <TechStackNew />
+      <Certifications />
+      <CallToAction />
+      <Contact />
     </div>
   );
 };

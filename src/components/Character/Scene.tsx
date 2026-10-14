@@ -74,6 +74,12 @@ const Scene = () => {
             handleResize(renderer, camera, canvasDiv, character)
           );
         }
+      }).catch((err) => {
+        console.warn("Character 3D load fallback:", err);
+        progress.clear();
+        import("../utils/initialFX").then((module) => {
+          if (module.initialFX) module.initialFX();
+        });
       });
 
       let mouse = { x: 0, y: 0 },

@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Work = () => {
   useEffect(() => {
-    // Disable pinning on mobile to allow scrolling
+    // Disable pinning on mobile to allow natural vertical scrolling
     if (window.innerWidth <= 768) return;
 
     let translateX: number = 0;
@@ -18,14 +18,15 @@ const Work = () => {
     function setTranslateX() {
       const box = document.getElementsByClassName("work-box");
       if (box.length === 0) return;
-      const rectLeft = document
-        .querySelector(".work-container")!
-        .getBoundingClientRect().left;
+      const container = document.querySelector(".work-container");
+      if (!container) return;
+      const rectLeft = container.getBoundingClientRect().left;
       const rect = box[0].getBoundingClientRect();
-      const parentWidth = box[0].parentElement!.getBoundingClientRect().width;
+      const parent = box[0].parentElement;
+      const parentWidth = parent ? parent.getBoundingClientRect().width : window.innerWidth;
       let padding: number =
-        parseInt(window.getComputedStyle(box[0]).padding) / 2;
-      translateX = rect.width * box.length - (rectLeft + parentWidth) + padding;
+        parseInt(window.getComputedStyle(box[0]).padding) / 2 || 0;
+      translateX = Math.max(0, rect.width * box.length - (rectLeft + parentWidth) + padding);
     }
 
     setTranslateX();
@@ -50,12 +51,18 @@ const Work = () => {
     });
 
     // Refresh ScrollTrigger after layout settles
-    ScrollTrigger.refresh();
+    const refreshTimer = setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 150);
 
     // Clean up
     return () => {
+      clearTimeout(refreshTimer);
       timeline.kill();
-      ScrollTrigger.getById("work")?.kill();
+      const st = ScrollTrigger.getById("work");
+      if (st) {
+        st.kill(true);
+      }
     };
   }, []);
   return (
