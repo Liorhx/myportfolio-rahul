@@ -119,12 +119,12 @@ export const config = {
         },
         {
             id: 2,
-            title: "Aviotor",
+            title: "Aviator",
             category: "MERN / Real-Time Cloud",
             technologies: "React, Node.js, Express, MongoDB, AWS, Tailwind CSS",
             image: "/images/Aviotor.jpg",
             description: "Aviator is a multiplier-based, real-time web app built on the MERN stack and hosted on AWS.",
-            link: "http://18.234.23.109:3000",
+            link: "https://aviator-smoky.vercel.app/",
             features: [
                 "JWT-based authentication and secure user management",
                 "Interactive dashboard for project and workflow tracking",
