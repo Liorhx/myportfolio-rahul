@@ -37,30 +37,10 @@ const MainContainer = ({ children }: PropsWithChildren) => {
 
   useEffect(() => {
     if (window.innerWidth <= 1024) return;
-
-    let timeoutId: ReturnType<typeof setTimeout> | undefined;
-    let idleId: number | undefined;
-    const win = window as Window & {
-      requestIdleCallback?: (callback: IdleRequestCallback, options?: IdleRequestOptions) => number;
-      cancelIdleCallback?: (handle: number) => void;
-    };
-
-    const mountCharacter = () => setShouldRenderCharacter(true);
-
-    if (typeof win.requestIdleCallback === "function") {
-      idleId = win.requestIdleCallback(mountCharacter, { timeout: 1500 });
-    } else {
-      timeoutId = setTimeout(mountCharacter, 1200);
-    }
-
-    return () => {
-      if (idleId !== undefined && typeof win.cancelIdleCallback === "function") {
-        win.cancelIdleCallback(idleId);
-      }
-      if (timeoutId !== undefined) {
-        clearTimeout(timeoutId);
-      }
-    };
+    const timer = setTimeout(() => {
+      setShouldRenderCharacter(true);
+    }, 50);
+    return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {

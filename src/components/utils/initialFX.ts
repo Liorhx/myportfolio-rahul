@@ -2,6 +2,8 @@ import { TextSplitter } from "../../utils/textSplitter";
 import gsap from "gsap";
 import { lenis } from "../Navbar";
 
+let hasRunInitialFX = false;
+
 export function initialFX() {
   document.body.style.overflowY = "auto";
   document.documentElement.style.overflowY = "auto";
@@ -12,6 +14,10 @@ export function initialFX() {
   if (mainElem) {
     mainElem.classList.add("main-active");
   }
+
+  if (hasRunInitialFX) return;
+  hasRunInitialFX = true;
+
   gsap.to("body", {
     backgroundColor: "#0b080c",
     duration: 0.5,
