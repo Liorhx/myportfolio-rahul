@@ -134,19 +134,18 @@ export const config = {
             ]
         },
         {
-            id: 3,
-            title: "InstaCrm",
-            category: "SaaS / CRM System",
-            technologies: "React, Node.js, Express, MongoDB, Tailwind CSS, JWT",
-            image: "/images/InstaCrm.jpg",
-            description: "Sales pipeline and CRM platform with lead, contact, and deal tracking dashboard.",
-            link: "https://instagram-crm.onrender.com",
+            id: 7,
+            title: "Moviemaniac",
+            category: "Entertainment / API",
+            technologies: "React, REST APIs, CSS3, JavaScript",
+            image: "/images/MovieManiac.jpg",
+            description: "A React app to search and browse movies using live API data.",
+            link: "https://moviemaniac-tpn5.onrender.com",
             features: [
-                "Lead, contact, and deal management",
-                "JWT-based authentication with role-based access",
-                "Sales pipeline and customer tracking dashboard",
-                "Responsive UI built with React and Tailwind CSS",
-                "MERN stack architecture with MongoDB integration"
+                "Upcoming, Toprated, Popular",
+                "Light/Dark mode support",
+                "Responsive",
+                "Sort by date, star, rating"
             ]
         },
         {
@@ -197,19 +196,21 @@ export const config = {
                 "Add to Cart functionality"
             ]
         },
+
         {
-            id: 7,
-            title: "Moviemaniac",
-            category: "Entertainment / API",
-            technologies: "React, REST APIs, CSS3, JavaScript",
-            image: "/images/MovieManiac.jpg",
-            description: "A React app to search and browse movies using live API data.",
-            link: "https://moviemaniac-tpn5.onrender.com",
+            id: 3,
+            title: "InstaCrm",
+            category: "SaaS / CRM System",
+            technologies: "React, Node.js, Express, MongoDB, Tailwind CSS, JWT",
+            image: "/images/InstaCrm.jpg",
+            description: "Sales pipeline and CRM platform with lead, contact, and deal tracking dashboard.",
+            link: "https://instagram-crm.onrender.com",
             features: [
-                "Upcoming, Toprated, Popular",
-                "Light/Dark mode support",
-                "Responsive",
-                "Sort by date, star, rating"
+                "Lead, contact, and deal management",
+                "JWT-based authentication with role-based access",
+                "Sales pipeline and customer tracking dashboard",
+                "Responsive UI built with React and Tailwind CSS",
+                "MERN stack architecture with MongoDB integration"
             ]
         },
         {
