@@ -107,7 +107,7 @@ export const config = {
             technologies: "React, Tailwind CSS, Firebase, Firestore, Socket.io",
             image: "/images/VentureFlow.jpg",
             description: "VentureFlow is a platform for founders and investors to share ideas and connect.",
-            link: "https://ventureflow-3rya.onrender.com",
+            link: "https://venture-flow-nine.vercel.app/",
             features: [
                 "Firebase Authentication with role-based access",
                 "Startup idea posting and discovery",
@@ -124,7 +124,7 @@ export const config = {
             technologies: "React, Node.js, Express, MongoDB, AWS, Tailwind CSS",
             image: "/images/Aviotor.jpg",
             description: "Aviator is a multiplier-based, real-time web app built on the MERN stack and hosted on AWS.",
-            link: "https://venture-flow-nine.vercel.app/",
+            link: "https://aviator-smoky.vercel.app/",
             features: [
                 "JWT-based authentication and secure user management",
                 "Interactive dashboard for project and workflow tracking",
