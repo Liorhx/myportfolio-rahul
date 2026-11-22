@@ -84,6 +84,23 @@ export const config = {
     ],
     projects: [
         {
+            id: 2,
+            title: "100KPro",
+            category: "EdTech / Creator Growth",
+            technologies: "React, Tailwind CSS, Node.js, Express, MongoDB, Razorpay",
+            image: "/images/100KPro.jpg",
+            description: "100KPro is an online learning platform for YouTube faceless channel growth, featuring course purchasing with Razorpay integration, real-time course progress tracking, secure authentication, and responsive dashboards built using the MERN stack.",
+            link: "https://100kpro.vercel.app/",
+            features: [
+                "Course purchasing workflow with Razorpay payment integration",
+                "Real-time course progress tracking across modules",
+                "Secure user authentication and student dashboards",
+                "Step-by-step short-form content creation and growth modules",
+                "Responsive UI built with React and Tailwind CSS",
+                "Full-stack MERN architecture deployed on Vercel"
+            ]
+        },
+        {
             id: 18,
             title: "BigIdeaSolar",
             category: "Clean Energy / Solar Installation",
