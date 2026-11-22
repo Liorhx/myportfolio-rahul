@@ -101,39 +101,6 @@ export const config = {
             ]
         },
         {
-            id: 1,
-            title: "VentureFlow",
-            category: "Fintech / Networking",
-            technologies: "React, Tailwind CSS, Firebase, Firestore, Socket.io",
-            image: "/images/VentureFlow.jpg",
-            description: "VentureFlow is a platform for founders and investors to share ideas and connect.",
-            link: "https://venture-flow-nine.vercel.app/",
-            features: [
-                "Firebase Authentication with role-based access",
-                "Startup idea posting and discovery",
-                "Real-time chat with Socket.io",
-                "Firestore database integration",
-                "Responsive React and Tailwind UI",
-                "Full-stack deployment on Render"
-            ]
-        },
-        {
-            id: 2,
-            title: "Aviator",
-            category: "MERN / Real-Time Cloud",
-            technologies: "React, Node.js, Express, MongoDB, AWS, Tailwind CSS",
-            image: "/images/Aviotor.jpg",
-            description: "Aviator is a multiplier-based, real-time web app built on the MERN stack and hosted on AWS.",
-            link: "https://aviator-smoky.vercel.app/",
-            features: [
-                "JWT-based authentication and secure user management",
-                "Interactive dashboard for project and workflow tracking",
-                "Real-time data updates with RESTful APIs",
-                "Responsive UI built with React and Tailwind CSS",
-                "AWS deployment with scalable cloud infrastructure"
-            ]
-        },
-        {
             id: 7,
             title: "Moviemaniac",
             category: "Entertainment / API",
@@ -155,13 +122,64 @@ export const config = {
             technologies: "Node.js, Express, MongoDB, Gemini AI, JWT, React, Tailwind CSS",
             image: "/images/AIInterviewTaker.jpg",
             description: "An AI-powered interview practice platform that simulates real technical interviews by generating dynamic questions and analyzing candidate responses.",
-            link: "https://aiinterviewpro-3g8d.onrender.com",
+            link: "https://ai-pro-interview.vercel.app",
             features: [
                 "AI-generated interview questions using Gemini AI",
                 "JWT-based authentication with role-based interview sessions",
                 "AI analysis of responses to track performance, progress, and weak areas",
                 "Responsive UI built with React and Tailwind CSS",
                 "Full-stack MERN deployment with Express serving frontend and backend"
+            ]
+        },
+
+        {
+            id: 3,
+            title: "InstaCrm",
+            category: "SaaS / CRM System",
+            technologies: "React, Node.js, Express, MongoDB, Tailwind CSS, JWT",
+            image: "/images/InstaCrm.jpg",
+            description: "Sales pipeline and CRM platform with lead, contact, and deal tracking dashboard.",
+            link: "https://leadinsta-crm.vercel.app",
+            features: [
+                "Lead, contact, and deal management",
+                "JWT-based authentication with role-based access",
+                "Sales pipeline and customer tracking dashboard",
+                "Responsive UI built with React and Tailwind CSS",
+                "MERN stack architecture with MongoDB integration"
+            ]
+        },
+        {
+            id: 2,
+            title: "Aviator",
+            category: "MERN / Real-Time Cloud",
+            technologies: "React, Node.js, Express, MongoDB, AWS, Tailwind CSS",
+            image: "/images/Aviotor.jpg",
+            description: "Aviator is a multiplier-based, real-time web app built on the MERN stack and hosted on AWS.",
+            link: "https://aviator-smoky.vercel.app/",
+            features: [
+                "JWT-based authentication and secure user management",
+                "Interactive dashboard for project and workflow tracking",
+                "Real-time data updates with RESTful APIs",
+                "Responsive UI built with React and Tailwind CSS",
+                "AWS deployment with scalable cloud infrastructure"
+            ]
+        },
+
+        {
+            id: 1,
+            title: "VentureFlow",
+            category: "Fintech / Networking",
+            technologies: "React, Tailwind CSS, Firebase, Firestore, Socket.io",
+            image: "/images/VentureFlow.jpg",
+            description: "VentureFlow is a platform for founders and investors to share ideas and connect.",
+            link: "https://venture-flow-nine.vercel.app/",
+            features: [
+                "Firebase Authentication with role-based access",
+                "Startup idea posting and discovery",
+                "Real-time chat with Socket.io",
+                "Firestore database integration",
+                "Responsive React and Tailwind UI",
+                "Full-stack deployment on Render"
             ]
         },
         {
@@ -197,22 +215,7 @@ export const config = {
             ]
         },
 
-        {
-            id: 3,
-            title: "InstaCrm",
-            category: "SaaS / CRM System",
-            technologies: "React, Node.js, Express, MongoDB, Tailwind CSS, JWT",
-            image: "/images/InstaCrm.jpg",
-            description: "Sales pipeline and CRM platform with lead, contact, and deal tracking dashboard.",
-            link: "https://instagram-crm.onrender.com",
-            features: [
-                "Lead, contact, and deal management",
-                "JWT-based authentication with role-based access",
-                "Sales pipeline and customer tracking dashboard",
-                "Responsive UI built with React and Tailwind CSS",
-                "MERN stack architecture with MongoDB integration"
-            ]
-        },
+
         {
             id: 8,
             title: "ShopKaro",
