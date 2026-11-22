@@ -84,7 +84,7 @@ export const config = {
     ],
     projects: [
         {
-            id: 2,
+            id: 21,
             title: "100KPro",
             category: "EdTech / Creator Growth",
             technologies: "React, Tailwind CSS, Node.js, Express, MongoDB, Razorpay",
